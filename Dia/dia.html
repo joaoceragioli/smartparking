@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+      <html>
+      <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Hora do dia', 'Entrada de carros', 'Saída de carros', 'Average'],
+         ['5:00',  20,      800,         522],
+         ['6:00',  200,      1120,        599],
+         ['7:00',  1570,      1167,        587],
+         ['8:00',  1390,      1110,        615],
+         ['9:00',  500,      1110,        615],
+         ['10:00',  500,      1110,        615],
+         ['11:00',  500,      1110,        615],
+         ['12:00',  500,      1110,        615],
+         ['13:00',  2000,      1110,        615],
+         ['14:00',  800,      1110,        615],
+         ['15:00',  20,      1110,        615],
+         ['16:00',  20,      1110,        615],
+         ['17:00',  20,      1110,        615],
+         ['18:00',  2000,      1110,        615],
+         ['19:00',  600,      1110,        615],
+         ['20:00',  20,      1110,        615],
+         ['21:00',  20,      1110,        615],
+         ['22:00',  20,      1110,        615],
+         ['23:00',  0,      691,         629],
+         ['24:00',  0,      691,         629]
+      ]);
+
+      var options = {
+        title: 'Dia',
+        seriesType: 'bars',
+      	series: {2: {type: 'line'}},
+        colors: ['#00FF00', 'ff0000','#0d48c6'],
+
+        hAxis: {
+          title: 'Hora do dia',
+        
+          textStyle: {
+            fontSize: 14,
+            color: '#053061',
+            bold: true,
+            italic: false
+          },
+          titleTextStyle: {
+            fontSize: 18,
+            color: '#053061',
+            bold: true,
+            italic: false
+          }
+        },
+        vAxis: {
+          title: '',
+          textStyle: {
+            fontSize: 18,
+            color: '#67001f',
+            bold: false,
+            italic: false
+         
+        },
+        titleTextStyle: {
+            fontSize: 18,
+            color: '#67001f',
+            bold: true,
+            italic: false
+          }}
+      };
+
+      var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+      </script>
+      </head>
+      <body>
+      <div id="chart_div" style="width: 900px; height: 500px;" ></div>
+      </body>
+      </html>

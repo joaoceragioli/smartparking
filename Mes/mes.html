@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(drawSemana1);
+      google.charts.setOnLoadCallback(drawSemana2);
+      google.charts.setOnLoadCallback(drawSemana3);
+      google.charts.setOnLoadCallback(drawSemana4);
+      google.charts.setOnLoadCallback(drawSemana5);
+
+
+      function drawSemana1() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 1'};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana1_chart_div'));
+        chart.draw(data, options);
+      }
+
+     function drawSemana1() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 1',
+                       width:400,
+                       height:300};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana1_chart_div'));
+        chart.draw(data, options);
+      }
+
+     function drawSemana2() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 2',
+                       width:400,
+                       height:300};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana2_chart_div'));
+        chart.draw(data, options);
+      }
+      
+      function drawSemana3() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 3',
+                       width:400,
+                       height:300};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana3_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function drawSemana4() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 4',
+                       width:400,
+                       height:300};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana4_chart_div'));
+        chart.draw(data, options);
+      } 
+      function drawSemana5() {
+
+        var data = new google.visualization.arrayToDataTable([
+         ['Dia da Semana', 'Entrada de carros'],
+         ['S',  3000],
+         ['T',  3200],
+         ['Q',  2900],
+         ['Q',  3100],
+         ['S',  2800],
+         ['S',  1500],
+         ['D',  500]  
+      ]);
+
+        var options = {title:'Semana 5',
+                       width:400,
+                       height:300};
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('Semana5_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <!--Table and divs that hold the pie charts-->
+    <table class="columns">
+      <tr>
+        <td><div id="Semana1_chart_div" style="border: 1px solid #ccc"></div></td>
+		<td><div id="Semana2_chart_div" style="border: 1px solid #ccc"></div></td>
+		<td><div id="Semana3_chart_div" style="border: 1px solid #ccc"></div></td>
+	</tr>
+	 <tr>
+		<td><div id="Semana4_chart_div" style="border: 1px solid #ccc"></div></td>
+		<td><div id="Semana5_chart_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+  </body>
+</html>
